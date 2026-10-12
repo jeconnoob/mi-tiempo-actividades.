@@ -1,0 +1,22 @@
+MI TIEMPO — PAQUETE PWA PARA PUBLICAR DESDE ANDROID
+
+Archivos: index.html, manifest.json, service-worker.js, icons/icon-192.png y icons/icon-512.png.
+
+PUBLICAR DESDE EL CELULAR:
+1. Descomprime el ZIP con el gestor de archivos del teléfono.
+2. En Chrome entra a github.com e inicia sesión o crea una cuenta.
+3. Crea un repositorio nuevo, por ejemplo mi-tiempo-actividades.
+4. En el repositorio usa Add file > Upload files y sube TODOS los archivos conservando la estructura: index.html, manifest.json, service-worker.js e icons/ con los dos PNG.
+5. Guarda los cambios (Commit changes).
+6. Abre Settings > Pages. En Build and deployment elige Deploy from a branch; selecciona main y /(root), y guarda.
+7. Espera la publicación. La URL será https://TU-USUARIO.github.io/mi-tiempo-actividades/ (reemplaza TU-USUARIO por tu usuario de GitHub).
+8. Abre esa URL en Chrome Android, deja que cargue una vez y abre ⋮ > Instalar aplicación o Añadir a pantalla de inicio.
+
+SIN CONEXIÓN Y DATOS:
+- Tras la primera carga en línea, el service worker almacena los recursos esenciales para abrir la app sin conexión.
+- Los registros se guardan en localStorage de ese navegador/origen. No se suben a GitHub.
+- No borres los datos del sitio. Descarga copias JSON periódicamente desde Recordatorios.
+
+LÍMITES:
+Los recordatorios del prototipo funcionan mientras la página esté abierta y activa. No garantizan avisos con la app cerrada. Para alarmas fiables en segundo plano se necesita una implementación Android adicional.
+La web publicada en GitHub Pages es pública. No incluyas datos personales en el código ni subas archivos con tus registros.
